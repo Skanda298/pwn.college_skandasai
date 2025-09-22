@@ -7,6 +7,7 @@ The path was '/pwn'.
 
 In the problem statement, it was provided that if i prove the path for the program '/pwn', it would providw the flag.
 '''
+
 hacker@paths~the-root:~$ /pwn
 BOOM!!!
 Here is your flag:
@@ -36,6 +37,7 @@ the absolute path was '/challege/run'.
 
 In the problem statement, it was provided that xecute the run file that is in the challenge directory that is, in turn, in the / directory, it will give the flag
 '''
+
 hacker@paths~program-and-absolute-paths:~$ /challenge/run
 Correct!!!
 /challenge/run is an absolute path! Here is your flag:
@@ -100,6 +102,7 @@ The challenge required changing the shell's current working directory using cd t
 
 I changed into the required directory and ran the challenge binary
 '''
+
 hacker@paths~position-elsewhere:~$ cd /usr/share/build-essential
 hacker@paths~position-elsewhere:/usr/share/build-essential$ /challenge/run
 Correct!!!
@@ -133,6 +136,7 @@ The challenge required changing the shell's current working directory using cd t
 
 I changed into the required directory and ran the challenge binary:
 '''
+
 hacker@paths~position-yet-elsewhere:~$ cd /tmp
 hacker@paths~position-yet-elsewhere:/tmp$ /challenge/run
 Correct!!!
@@ -165,6 +169,7 @@ This level demonstrated relative paths: you must invoke the challenge program us
 
 I changed to the root directory / and ran the program using a relative path (no leading /):
 '''
+
 hacker@paths~implicit-relative-paths-from-:~$ cd /
 hacker@paths~implicit-relative-paths-from-:/$ challenge/run
 Correct!!!
@@ -206,6 +211,7 @@ This level required invoking the challenge program using an explicit relative pa
 
 I changed to the root directory / and ran the program with an explicit relative path:
 '''
+
 hacker@paths~explicit-relative-paths-from-:~$ cd /
 hacker@paths~explicit-relative-paths-from-:/$ ./challenge/run
 Correct!!!
@@ -246,6 +252,7 @@ This level required running the run program from inside the /challenge directory
 
 I changed into /challenge and executed the program using a relative path that explicitly refers to the current directory:
 '''
+
 hacker@paths~implicit-relative-path:/$ cd /challenge
 hacker@paths~implicit-relative-path:/challenge$ ./run
 Correct!!!
