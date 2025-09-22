@@ -6,7 +6,7 @@ The path was '/pwn'.
 **flag:** 'pwn.college{YKuVqKDPG3z45W8pc5p8w2cuGfX.QX4cTO0wSNwAzNzEzW}'
 
 In the problem statement, it was provided that if i prove the path for the program '/pwn', it would providw the flag.
-'''
+```
 
 hacker@paths~the-root:~$ /pwn
 
@@ -15,7 +15,7 @@ BOOM!!!
 Here is your flag:
 
 pwn.college{YKuVqKDPG3z45W8pc5p8w2cuGfX.QX4cTO0wSNwAzNzEzW}
-
+```
 ## What i learned
 I learned to invokoe the path for a program  
 I learned to invove '/pwn'
@@ -39,7 +39,7 @@ the absolute path was '/challege/run'.
 **flag:** 'pwn.college{Mzt1CQA1uEYWp_13JhvRWFYpVrb.QX1QTN0wSNwAzNzEzW}'
 
 In the problem statement, it was provided that xecute the run file that is in the challenge directory that is, in turn, in the / directory, it will give the flag
-'''
+```
 
 hacker@paths~program-and-absolute-paths:~$ /challenge/run
 
@@ -48,7 +48,7 @@ Correct!!!
 /challenge/run is an absolute path! Here is your flag:
 
 pwn.college{Mzt1CQA1uEYWp_13JhvRWFYpVrb.QX1QTN0wSNwAzNzEzW}
-
+```
 ## What I learned
 I learned to invoke the absolute path of a program
 I learned to invoke '/challenge/run'
@@ -71,7 +71,7 @@ The challenge required changing the shell's current working directory using cd, 
 **Flag:** ' pwn.college{MFcDZNweRANIOVCNgWfb3vOrKa2.QX2QTN0wSNwAzNzEzW}'
 
 I followed the instructions to change into /var/log and then ran the challenge binary from there:
-'''
+```
 
 
 hacker@paths~position-thy-self:~$ /challenge/run
@@ -93,7 +93,7 @@ Correct!!!
 Here is your flag:
 
 pwn.college{MFcDZNweRANIOVCNgWfb3vOrKa2.QX2QTN0wSNwAzNzEzW}
-
+```
 ## What I learned
 The shell maintains a current working directory; many programs may check it before completing their task.
 cd /var/log changes the shell's current directory to /var/log.
@@ -102,10 +102,10 @@ Executing a program by absolute path (e.g. /challenge/run) still checks the curr
 ## References
 The problem statement and the challenge program output shown above.
 The Linux filesystem has tons of directories with tons of files. You can navigate around directories by using the cd (change directory) command and passing a path to it as an argument, as so:
-
+```
 hacker@dojo:~$ cd /some/new/directory
 hacker@dojo:/some/new/directory$
-
+```
 This affects the "current working directory" of your process (in this case, the bash shell). Each process has a directory in which it's currently hanging out.
 This challenge will require you to execute the /challenge/run program from a specific path (which it will tell you). You'll need to cd to that directory before rerunning the challenge program.
 
@@ -118,7 +118,7 @@ The challenge required changing the shell's current working directory using cd t
 **Flag:** 'pwn.college{waRMoTLHBl-ImdvpKMY4DWxle1Q.QX3QTN0wSNwAzNzEzW}'
 
 I changed into the required directory and ran the challenge binary
-'''
+```
 
 hacker@paths~position-elsewhere:~$ cd /usr/share/build-essential
 
@@ -133,7 +133,7 @@ Here is your flag:
 pwn.college{waRMoTLHBl-ImdvpKMY4DWxle1Q.QX3QTN0wSNwAzNzEzW}
 
 hacker@paths~position-elsewhere:/usr/share/build-essential$
-
+```
 ## What I learned
 You must place your shell in the correct current working directory before running some challenge programs.
 cd /usr/share/build-essential sets the shell’s working directory to /usr/share/build-essential.
@@ -142,10 +142,10 @@ cd /usr/share/build-essential sets the shell’s working directory to /usr/share
 The challenge prompt and the /challenge/run program output shown above.
 
 The Linux filesystem has tons of directories with tons of files. You can navigate around directories by using the cd (change directory) command and passing a path to it as an argument, as so:
-
+```
 hacker@dojo:~$ cd /some/new/directory
 hacker@dojo:/some/new/directory$
-
+```
 This affects the "current working directory" of your process (in this case, the bash shell). Each process has a directory in which it's currently hanging out. 
 This challenge will require you to execute the /challenge/run program from a specific path (which it will tell you). You'll need to cd to that directory before rerunning the challenge program.
 
@@ -158,7 +158,7 @@ The challenge required changing the shell's current working directory using cd t
 **Flag:** ' pwn.college{o7wry_RTLjSFzoWDwhOUFW5Z_YE.QX4QTN0wSNwAzNzEzW}'
 
 I changed into the required directory and ran the challenge binary:
-'''
+```
 
 hacker@paths~position-yet-elsewhere:~$ cd /tmp
 
@@ -171,7 +171,7 @@ Correct!!!
 Here is your flag:
 
 pwn.college{o7wry_RTLjSFzoWDwhOUFW5Z_YE.QX4QTN0wSNwAzNzEzW}
-
+```
 ## What I learned
 The shell’s current working directory matters — some programs check it before proceeding.
 Use cd /tmp to set the working directory to /tmp.
@@ -180,11 +180,11 @@ Use cd /tmp to set the working directory to /tmp.
 The challenge prompt and the /challenge/run program output shown above.
 
 The Linux filesystem has tons of directories with tons of files. You can navigate around directories by using the cd (change directory) command and passing a path to it as an argument, as so:
-
+```
 hacker@dojo:~$ cd /some/new/directory
 
 hacker@dojo:/some/new/directory$
-
+```
 This affects the "current working directory" of your process (in this case, the bash shell). Each process has a directory in which it's currently hanging out.
 This challenge will require you to execute the /challenge/run program from a specific path (which it will tell you). You'll need to cd to that directory before rerunning the challenge program.
 
@@ -197,7 +197,7 @@ This level demonstrated relative paths: you must invoke the challenge program us
 **Flag:**  'pwn.college{sZai0AOqO0Z3gYymbFoPF04EvPh.QX5QTN0wSNwAzNzEzW}'
 
 I changed to the root directory / and ran the program using a relative path (no leading /):
-'''
+```
 
 hacker@paths~implicit-relative-paths-from-:~$ cd /
 
@@ -212,7 +212,7 @@ Here is your flag:
 pwn.college{sZai0AOqO0Z3gYymbFoPF04EvPh.QX5QTN0wSNwAzNzEzW}
 
 hacker@paths~implicit-relative-paths-from-:/$
-
+```
 ## What I learned
 A relative path does not start with / and is interpreted relative to the current working directory (cwd).
 When cwd is /, a relative path challenge/run refers to /challenge/run.
@@ -245,7 +245,7 @@ This level required invoking the challenge program using an explicit relative pa
 **Flag:** 'pwn.college{UZ1xN68F9PGAlcrFifytXe6LBXR.QXwUTN0wSNwAzNzEzW}'
 
 I changed to the root directory / and ran the program with an explicit relative path:
-'''
+```
 
 hacker@paths~explicit-relative-paths-from-:~$ cd /
 
@@ -258,7 +258,7 @@ Correct!!!
 Here is your flag:
 
 pwn.college{UZ1xN68F9PGAlcrFifytXe6LBXR.QXwUTN0wSNwAzNzEzW}
-
+```
 
 ## What I learned
 ./ refers to the current directory; ./challenge/run therefore resolves to /challenge/run when the cwd is /.
@@ -286,7 +286,7 @@ challenge
 ./././challenge
 
 challenge/.
-
+`
 Of course, if your current working directory is /, the above relative paths are equivalent to the above absolute paths.The challenge instructions explaining . and .. and the program output shown above.
 
 
@@ -299,7 +299,7 @@ This level required running the run program from inside the /challenge directory
 **Flag:** 'pwn.college{8sG6kJUx1HS-b5Y4Dl_D4sBClRo.QXxUTN0wSNwAzNzEzW}'
 
 I changed into /challenge and executed the program using a relative path that explicitly refers to the current directory:
-'''
+```
 
 hacker@paths~implicit-relative-path:/$ cd /challenge
 
@@ -312,7 +312,7 @@ correct!
 Here is your flag:
 
 pwn.college{8sG6kJUx1HS-b5Y4Dl_D4sBClRo.QXxUTN0wSNwAzNzEzW}
-
+```
 ## What I learned
 The shell does not search the current directory for executables when you type a "naked" command name (e.g., run). This is a safety measure.
 To run a program that resides in the current directory, you must specify a relative path such as ./run.
@@ -323,11 +323,11 @@ The challenge instructions explaining . and why the current directory isn't sear
 This challenge will need you to run it from the /challenge directory. Here, things get slightly tricky.
 
 Linux explicitly avoids automatically looking in the current directory when you provide a "naked" path. Consider the following:
-
+```
 hacker@dojo:~$ cd /challenge
 
 hacker@dojo:/challenge$ run
-
+```
 This will not invoke /challenge/run. This is actually a safety measure: if Linux searched the current directory for programs every time you entered a naked path, 
 you could accidentally execute programs in your current directory that happened to have the same names as core system utilities! As a result, the above commands will yield the following error:
 
@@ -345,7 +345,7 @@ The challenge required providing a path to /challenge/run that was absolute, ins
 **Flag:** 'pwn.college{QGsGZoFkOOylS2vS-vyINtSVmeX.QXzMDO0wSNwAzNzEzW}'
 
 Bash
-
+```
 hacker@paths~home-sweet-home:~$ /challenge/run ~/a
 
 Writing the file to /home/hacker/a!
@@ -353,7 +353,7 @@ Writing the file to /home/hacker/a!
 ... and reading it back to you:
 
 pwn.college{QGsGZoFkOOylS2vS-vyINtSVmeX.QXzMDO0wSNwAzNzEzW}
-
+```
 ## What I learned
  learned that the ~ shorthand is expanded by Bash into an absolute path to the home directory before a command is executed.
  I also learned that you must specify a filename, not just a directory, when writing to a location. The final solution combined these two pieces of knowledge to successfully meet all the challenge's constraints.
@@ -366,13 +366,13 @@ Every user has a home directory, typically under /home in the filesystem. In the
 The home directory is typically where users store most of their personal files. As you make your way through pwn.college, this is where you'll store most of your solutions.
 
 Typically, your shell session will start with your home directory as your current working directory. Consider the initial prompt:
-
+```
 hacker@dojo:~$
-
+```
 The ~ in this prompt is the current working directory, with ~ being shorthand for /home/hacker.
  Bash provides and uses this shorthand because, again, most of your time will be spent in your home directory. 
 Thus, whenever bash sees ~ provided as the start of an argument in a way consistent with a path, it will expand it to your home directory. Consider:
-
+```
 hacker@dojo:~$ echo LOOK: ~
 
 LOOK: /home/hacker
@@ -390,16 +390,16 @@ hacker@dojo:~/asdf$ cd ~
 hacker@dojo:~$ cd /home/hacker/asdf
 
 hacker@dojo:~/asdf$
-
+```
 Note that the expansion of ~ is an absolute path, and only the leading ~ is expanded. This means, for example, that ~/~ will be expanded to /home/hacker/~ rather than /home/hacker/home/hacker.
 
-
+```
 hacker@dojo:~$ cd /tmp
 
 hacker@dojo:/tmp$ cd
 
 hacker@dojo:~$
-
+```
 Now it's your turn to play! In this challenge, /challenge/run will write a copy of the flag to any file you specify as an argument on the commandline, with these constraints:
 
 Your argument must be an absolute path.
