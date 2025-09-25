@@ -460,7 +460,7 @@ Now, it's your turn! Go find the flag, hidden as a dot-prepended file in /.
 
 11. 
 
-12. Making directories
+# 12. Making directories
 
 I  created a /tmp/pwn directory and made a college file in it. Then ran /challenge/run which gave the flag
 
