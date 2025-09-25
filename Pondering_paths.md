@@ -95,9 +95,8 @@ Here is your flag:
 pwn.college{MFcDZNweRANIOVCNgWfb3vOrKa2.QX2QTN0wSNwAzNzEzW}
 ```
 ## What I learned
-The shell maintains a current working directory; many programs may check it before completing their task.
 cd /var/log changes the shell's current directory to /var/log.
-Executing a program by absolute path (e.g. /challenge/run) still checks the current working directory of the shell that invoked it.
+Executing a program by absolute path checks the current working directory of the shell that invoked it.
 
 ## References
 The problem statement and the challenge program output shown above.
@@ -135,7 +134,7 @@ pwn.college{waRMoTLHBl-ImdvpKMY4DWxle1Q.QX3QTN0wSNwAzNzEzW}
 hacker@paths~position-elsewhere:/usr/share/build-essential$
 ```
 ## What I learned
-You must place your shell in the correct current working directory before running some challenge programs.
+You must change the directory into the correct one first
 cd /usr/share/build-essential sets the shell’s working directory to /usr/share/build-essential.
 
 ## References
@@ -173,7 +172,7 @@ Here is your flag:
 pwn.college{o7wry_RTLjSFzoWDwhOUFW5Z_YE.QX4QTN0wSNwAzNzEzW}
 ```
 ## What I learned
-The shell’s current working directory matters — some programs check it before proceeding.
+The shell’s current working directory matters
 Use cd /tmp to set the working directory to /tmp.
 
 ## References
@@ -214,9 +213,9 @@ pwn.college{sZai0AOqO0Z3gYymbFoPF04EvPh.QX5QTN0wSNwAzNzEzW}
 hacker@paths~implicit-relative-paths-from-:/$
 ```
 ## What I learned
-A relative path does not start with / and is interpreted relative to the current working directory (cwd).
+A relative path does not start with / 
 When cwd is /, a relative path challenge/run refers to /challenge/run.
-Because the level required a relative invocation, I ran challenge/run (not /challenge/run) from /.
+
 
 ## References
 The challenge instructions explaining relative vs absolute paths and the program output shown above.
@@ -261,9 +260,8 @@ pwn.college{UZ1xN68F9PGAlcrFifytXe6LBXR.QXwUTN0wSNwAzNzEzW}
 ```
 
 ## What I learned
-./ refers to the current directory; ./challenge/run therefore resolves to /challenge/run when the cwd is /.
+./ refers to the current directory
 Explicit relative paths (starting with ./) and "naked" relative paths (no ./) can refer to the same file depending on cwd.
-Knowing the difference between absolute (/challenge/run), implicit relative (challenge/run), and explicit relative (./challenge/run) paths is important for how a program is located by the shell.
 
 ## References
 In most operating systems, including Linux, every directory has two implicit entries that you can reference in paths: . and ... The first, ., refers right to the same directory,
@@ -314,7 +312,6 @@ Here is your flag:
 pwn.college{8sG6kJUx1HS-b5Y4Dl_D4sBClRo.QXxUTN0wSNwAzNzEzW}
 ```
 ## What I learned
-The shell does not search the current directory for executables when you type a "naked" command name (e.g., run). This is a safety measure.
 To run a program that resides in the current directory, you must specify a relative path such as ./run.
 . refers to the current directory; ./run tells the shell explicitly “run the run program located right here.”
 
@@ -355,10 +352,9 @@ Writing the file to /home/hacker/a!
 pwn.college{QGsGZoFkOOylS2vS-vyINtSVmeX.QXzMDO0wSNwAzNzEzW}
 ```
 ## What I learned
- learned that the ~ shorthand is expanded by Bash into an absolute path to the home directory before a command is executed.
- I also learned that you must specify a filename, not just a directory, when writing to a location. The final solution combined these two pieces of knowledge to successfully meet all the challenge's constraints.
-
-
+ learned that the ~ shorthand is an absolute path to the home directory 
+ I also learned that you must specify a filename, not just a directory, when writing to a location. 
+ 
 ## References
 The problem statement and the error messages from the program itself were my guides.
 
