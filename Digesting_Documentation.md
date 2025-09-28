@@ -250,7 +250,7 @@ HINT 1: man man teaches you advanced usage of the man command itself, and you mu
 HINT 2: though the manpage is randomly named, you still actually use /challenge/challenge to get the flag!
 
 
-6. Helpful Programs
+# 6. Helpful Programs
 
 I ran the program with --help to find the -p option, which revealed the secret value of 423 needed to get the flag with -g 423.
 
@@ -288,7 +288,7 @@ In this level, you will practice reading a program's documentation with --help. 
 Given that knowledge, go get the flag!
 
 
-7.  Help for Builtins
+# 7.  Help for Builtins
 
 I used the help challenge command to find the required --secret value, which was oZzufqTL, and executed the command with this value to get the flag.
 
@@ -297,7 +297,7 @@ I used the help challenge command to find the required --secret value, which was
 Flag: pwn.college{oZzufqTL9LM6ki7KPc8pf84swcw.QX0ETO0wSNwAzNzEzW}
 
 I ran:
-
+```
 hacker@man~help-for-builtins:~$ help challenge
 
 challenge: challenge [--fortune] [--version] [--secret SECRET]
@@ -322,7 +322,7 @@ pwn.college{oZzufqTL9LM6ki7KPc8pf84swcw.QX0ETO0wSNwAzNzEzW}
 You can get a list of shell builtins by running the builtin help
 
 You can get help on a specific one by passing it to the help builtin
-
+```
 ## References
 
 The problem statement was the major reference.
