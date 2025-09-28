@@ -320,7 +320,7 @@ DESCRIPTION.md  pwncollege​
 hacker@globbing~tab-completion:~$ cat /challenge/pwn<TAB>
 
 pwn.college{cfwshWMBdIZ4To37fMbYB8mLBF9.0FN0EzNxwSNwAzNzEzW}
-
+```
 ## What I learned
 
 Tab completion is a feature  that automatically completes file paths when you press the <TAB> key.
